@@ -1,0 +1,94 @@
+/*============================================================================
+	#FORM
+==============================================================================*/
+
+.form {
+
+	&__row {
+
+		margin-bottom: 16px;
+	}
+
+	&__input {
+
+		font-size: 15px;
+		width: 100%;
+		
+		border: none;
+		background: transparent;
+		border-bottom: 1px solid rgba(80, 4, 41, 0.43);
+		padding: 7px 12px;
+
+		&::placeholder {
+
+			font-size: 15px;
+			color: rgba(79, 3, 40, 0.5);
+			opacity: 1;
+			transition: opacity 0.1s ease-out;
+		}
+
+		&:focus::placeholder {
+
+			opacity: 0;
+		}
+	}
+
+	&__textarea {
+
+		font-size: 15px;
+		padding: 7px 12px;
+		min-height: 70px;
+		width: 100%;
+		border: none;
+		background: transparent;
+		border-bottom: 1px solid rgba(80, 4, 41, 0.43);
+		resize: vertical;
+
+		&::placeholder {
+
+			font-size: 15px;
+			color: rgba(79, 3, 40, 0.5);
+			opacity: 1;
+			transition: opacity 0.1s ease-out;
+		}
+
+		&:focus::placeholder {
+
+			opacity: 0;
+		}
+	}
+
+	.custom-textarea {
+		position: relative;
+		
+
+		&__label {
+
+			position: absolute;
+			bottom: 12px;
+			left: 12px;
+			font-size: 15px;
+			color: rgba(79, 3, 40, 0.5);
+			transition: opacity 0.1s ease-out;
+		}
+
+		textarea:focus + span,
+		textarea:valid + span {
+
+			opacity: 0;
+		}
+
+	}
+}
+
+.form {
+
+	em.error {
+
+		color: red;
+		font-size: 12px;
+		display: block;
+		line-height: 18px;
+		margin-top: 4px;
+	}
+}

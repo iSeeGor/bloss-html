@@ -1,0 +1,10 @@
+@mixin someName() {
+	
+}
+ 
+
+@mixin _1490 {
+    @media (max-width: 1490px){
+        @content;
+    }
+}

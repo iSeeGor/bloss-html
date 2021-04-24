@@ -1,0 +1,35 @@
+/*============================================================================
+	#Menu
+==============================================================================*/
+
+/* Landing Menu */
+ul.ld-menu {
+
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	> li {
+
+		margin: 0 12px;
+	}
+
+	> li > a {
+
+		text-decoration: none;
+		font-weight: $medium;
+		color: $colorMenu;
+		
+	}
+
+	a {
+
+		transition: color 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+
+	a:hover {
+
+		color: $colorPrimary;
+	}
+} 
