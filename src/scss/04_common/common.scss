@@ -147,3 +147,39 @@
 	}
 
 }
+
+
+@include _768 {
+
+	.section {
+
+		&__title {
+
+			font-size: 36px;
+			line-height: 1.4;
+		}
+	} 
+}
+
+@include _575 {
+
+	.section {
+
+		&__title {
+
+			font-size: 32px;
+			line-height: 1.5;
+		}
+	} 
+}
+
+@include _485 {
+
+	.section {
+
+		&__title {
+
+			font-size: 24px;
+		}
+	} 
+}
