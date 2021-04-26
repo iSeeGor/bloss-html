@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', function(){
 	
+	animationInit();
 	hamburger();
 	categoryToggle();
 	testimonialSlider();
@@ -26,6 +27,15 @@ window.addEventListener('DOMContentLoaded', function(){
 	// testimonialHomeReadMore();
 	
 });
+
+const animationInit = () => {
+
+	AOS.init({
+
+		disable: 'mobile',
+	});
+}
+
 const hamburger = () => {
 
 	document.querySelector('.hamburger').addEventListener('click', function(e) {
