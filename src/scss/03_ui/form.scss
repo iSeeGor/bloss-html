@@ -6,50 +6,71 @@
 
 	&__row {
 
-		margin-bottom: 16px;
+		margin-bottom: 24px;
+
+		&:last-child {
+
+			margin-bottom: 0;
+		}
 	}
 
-	&__input {
+	&__group {
 
-		font-size: 15px;
-		width: 100%;
 		
-		border: none;
+	}
+
+	&__label {
+
+		font-family: $fontPrimary;
+		color: $colorSecondary;
+		opacity: .5;
+		font-size: 16px;
+		font-weight: $regular;
+		line-height: 1.375;
+		margin-bottom: 12px;
+	} 
+
+	&__input {
+		font-family: $fontPrimary;
+		color: $colorSecondary;
+		font-size: 16px;
+		font-weight: $regular;
+		line-height: 1.375;
+		padding: 11px 16px;
+		border: 1px solid #D4D9E0;
+		border-radius: 16px;
+		width: 100%;
 		background: transparent;
-		border-bottom: 1px solid rgba(80, 4, 41, 0.43);
-		padding: 7px 12px;
+		transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 
 		&::placeholder {
-
-			font-size: 15px;
-			color: rgba(79, 3, 40, 0.5);
-			opacity: 1;
-			transition: opacity 0.1s ease-out;
+			transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+			color: #8D9AAE;
 		}
 
 		&:focus::placeholder {
 
 			opacity: 0;
+		}
+
+		&:focus {
+
+			border-color: $colorSecondary;
+		}
+
+		&:valid {
+
+			border-color: $colorSecondary;
 		}
 	}
 
 	&__textarea {
 
-		font-size: 15px;
-		padding: 7px 12px;
-		min-height: 70px;
-		width: 100%;
-		border: none;
-		background: transparent;
-		border-bottom: 1px solid rgba(80, 4, 41, 0.43);
-		resize: vertical;
+
 
 		&::placeholder {
 
-			font-size: 15px;
-			color: rgba(79, 3, 40, 0.5);
-			opacity: 1;
-			transition: opacity 0.1s ease-out;
+
 		}
 
 		&:focus::placeholder {
@@ -58,27 +79,12 @@
 		}
 	}
 
-	.custom-textarea {
-		position: relative;
-		
+	&__submit {
 
-		&__label {
-
-			position: absolute;
-			bottom: 12px;
-			left: 12px;
-			font-size: 15px;
-			color: rgba(79, 3, 40, 0.5);
-			transition: opacity 0.1s ease-out;
-		}
-
-		textarea:focus + span,
-		textarea:valid + span {
-
-			opacity: 0;
-		}
-
+		width: 100%;
+		min-width: 100%;
 	}
+
 }
 
 .form {
@@ -90,5 +96,46 @@
 		display: block;
 		line-height: 18px;
 		margin-top: 4px;
+	}
+}
+
+.button-radio {
+	position: relative;
+	display: inline-block;
+	
+	label {
+		display: block;
+		font-family: $fontPrimary;
+		color: $colorSecondary;
+		font-size: 16px;
+		font-weight: $regular;
+		line-height: 1.375;
+		padding: 11px 24px;
+		border: 1px solid #D4D9E0;
+		border-radius: 16px;
+		background: transparent;
+		transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+		position: relative;
+		cursor: pointer;
+	}
+
+	input[type="radio"] {
+
+		opacity: 0;
+		position: absolute;
+	}
+
+	input[type="radio"]:checked + label {
+
+		background: rgba(38, 64, 102, 0.055);
+		border-color: $colorSecondary;
+	}
+
+	&:hover {
+
+		label {
+
+			background: rgba(38, 64, 102, 0.055);
+		}
 	}
 }

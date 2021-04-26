@@ -4,7 +4,6 @@
 .site {
 	position: relative;
 	max-width: 1920px;
-	min-width: 1200px;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -107,6 +106,37 @@
 			z-index: 1;
 		}
 	}
+}
+
+.glass-overflow-in,
+.glass-overflow-out {
+	
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		background: rgba(38, 64, 102, 0.01);
+		backdrop-filter: blur(6px);	
+		z-index: 101;
+	}
+}
+
+.glass-overflow-in::before {
+
+	animation: glass-overflow-in 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.glass-overflow-out::before {
+
+	animation: glass-overflow-out 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .to-top {

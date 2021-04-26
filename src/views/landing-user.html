@@ -8,8 +8,8 @@
 				<div class="container header__container">
 
 					<div class="header-logo header__logo">
-						<a calss="header-logo__link" href="/">
-							<img calss="header-logo__image" src="images/logo.svg" alt="site logo">
+						<a class="header-logo__link" href="/">
+							<img class="header-logo__image" src="images/logo-footer.svg" alt="site logo">
 						</a>
 					</div>
 
@@ -23,11 +23,19 @@
 								<li><a href="#">Contacts</a></li>
 							</ul>
 						</nav>
+
+						<button class="button-primary">Are you an expert?</button>
 					</div>
 
 					<div class="header__links">
 						<button class="button-primary">Sing up for launch</button>
 						<button class="button-primary _dark">Are you an expert?</button>
+					</div>
+
+					<div class="header__hamburger hamburger hamburger--collapse">
+						<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+						</div>
 					</div>
 
 				</div>
@@ -109,11 +117,19 @@
 						</a>
 					</div>
 				</div>
+				<button class="button _close"></button>
+			</div>
+
+			<div class="hero-control">
+				<div class="container">
+					<button class="hero-control__categories button-primary _dark">Show All Categories</button>
+					<button class="hero-control__sing-up button-primary">Sign up for launch</button>
+				</div>
 			</div>
 
 		</section>
 
-		<section class="section about">
+		<!-- <section class="section about">
 			<div class="about__container container">
 				<div class="about__inner">
 					<div class="about__content">
@@ -508,8 +524,74 @@
 				</div>
 			</div>
 			
-			<div class="testimonial-slider__paginaion"></div>
+			<div class="testimonial-slider__pagination"></div>
 		</section>
+
+		<section class="section sing-up">
+			<div class="container">
+				<div class="sing-up__inner">
+					<div class="sing-up__media">
+						<img class="lazy-image" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="images/landing/singup-image-1.png" alt="">
+					</div>
+					<div class="sing-up__body">
+						<div class="sing-up__header">
+							<h2 class="sing-up__title">Sign up for launch</h2>
+							<h3 class="sing-up__description">
+								Enter your details today to be first to hear when we go live!
+							</h3>
+						</div>
+
+						<form class="form sing-up__form">
+							<div class="form__row">
+								<div class="form__group">
+									<div class="form__label">Full Name *</div>
+									<input type="text" class="form__input" placeholder="Add your Name" required >
+								</div>
+							</div>
+							<div class="form__row">
+								<div class="form__group">
+									<div class="form__label">Email *</div>
+									<input type="email" class="form__input" placeholder="Add your email" required >
+								</div>
+							</div>
+							<div class="form__row">
+								<div class="form__group">
+									<div class="form__label">Gender *</div>
+									<div class="button-radio">
+										<input type="radio" name="gender" id="gender_male" checked>
+										<label for="gender_male">Male</label>	
+									</div>
+									<div class="button-radio">
+										<input type="radio" name="gender" id="gender_female">
+										<label for="gender_female">Female</label>
+									</div>
+								</div>
+							</div>
+							<div class="form__row">
+								<div class="form__group">
+									<div class="form__label">What stage *</div>
+									<div class="button-radio _checked">
+										<input type="radio" name="stage" id="stage_conceive" checked>
+										<label for="stage_conceive">Trying to conceive</label>
+									</div>
+									<div class="button-radio">
+										<input type="radio" name="stage" id="stage_pregnant">
+										<label for="stage_pregnant">Pregnant</Д>
+									</div>
+									<div class="button-radio">
+										<input type="radio" name="stage" id="stage_parent">
+										<label for="stage_parent">Parent</label>
+									</div>
+								</div>
+							</div>
+							<div class="form__row">
+								<button class="button-primary form__submit _dark">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section> -->
 
 	</main>
 

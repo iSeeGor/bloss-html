@@ -166,3 +166,21 @@
 		box-shadow: 0 0 18px 20px rgba(245, 193, 188, 0.3) ;
 	}
 }
+
+.swiper-button {
+
+	&._dark {
+
+		background: $colorSecondary;
+
+		.icon {
+
+			stroke: $colorPrimary;
+		}
+
+		&:not(._disabled):hover {
+
+			box-shadow: 0 0 18px 20px rgba(38, 64, 102, 0.3);
+		}	
+	}
+}

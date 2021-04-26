@@ -1,9 +1,38 @@
 /*============================================================================
 	#Header
 ==============================================================================*/
+.header-logo {
+	position: relative;
+	z-index: 1;
+
+	&__link {
+
+		display: block;
+	}
+}
+
+.header-menu {
+
+	&__container {
+
+		position: relative;
+		z-index: 1;
+	}
+
+	.button-primary {
+
+		display: none;
+		opacity: 0;
+		transform: translateY(100%);
+		transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+}
+
 .header {
 	
 	padding: 9px 0;
+	position: relative;
+	z-index: 100;
 
 	&__container {
 
@@ -26,4 +55,146 @@
 			}
 		}
 	}
+
+	&__hamburger {
+
+		display: none;
+		visibility: hidden;
+	}
+}
+
+@include _1400 {
+
+	.header-logo {
+
+		&__link {
+
+			max-width: 160px;
+		}
+	}
+}
+
+@include _1200 {
+
+	.header-logo {
+
+		&__link {
+
+			max-width: 130px;
+		}
+	}
+
+	.header {
+
+		&__links {
+
+			.button-primary {
+
+				font-size: 14px;
+				min-width: auto;
+				padding: 11px 16px 10px 16px;
+
+				&:last-child {
+					margin-left: 18px;
+				}
+			}
+		}
+	}
+}
+
+@include _1024 {
+
+	.header-logo {
+
+		&__link {
+
+			max-width: 122px;
+		}
+	}
+
+	.header {
+
+		&__menu {
+
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			visibility: hidden;
+			pointer-events: none;
+			transition-delay: 1.1s;
+			
+			
+			&::before {
+
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background: $colorSecondary;
+				opacity: 0;
+				transition: opacity 1.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+			}
+		}
+
+		&__links{
+
+			display: none;
+			visibility: hidden;
+		}
+
+		&__hamburger {
+
+			display: block;
+			visibility: visible;
+		}
+	}
+
+	.header-menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding-top: 66px;
+
+		&__container {
+
+			// margin-top: 184px;
+			padding-top: 66px;
+		}
+
+		.button-primary {
+
+			display: block;
+		}
+	}
+
+	.header.is-active {
+
+		.header__menu {
+
+			display: flex;
+			visibility: visible;
+			pointer-events: all;
+			transition-delay: 0s;
+
+			&:before {
+
+				opacity: 1;
+			}
+		}
+
+		.header-menu {
+
+			.button-primary {
+
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	}
+
 }

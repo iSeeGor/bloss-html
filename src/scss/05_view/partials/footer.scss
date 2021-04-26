@@ -1,43 +1,113 @@
 /*============================================================================
 	#Footer
 ==============================================================================*/
-
-.footer-nav {
-
-	display: flex;
-	justify-content: center;
+.footer-logo {
 
 	&__link {
 
-		text-decoration: none;
-		text-transform: uppercase;
-		color: white;
-		font-size: 14px;
-		padding: 0 30px;
-		opacity: .5;
 		display: block;
-		transition: opacity 0.2s ease-out;
+		transition: opacity 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 
 		&:hover {
 
-			opacity: 1;
+			opacity: 0.8;
 		}
 	}
 }
 
-.phone-list {
+.footer-menu {
+
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	> li {
+
+		margin-bottom: 16px;
+
+		&:last-child {
+
+			margin-bottom: 0;
+		}
+	}
+
+	li a {
+
+		font-size: 18px;
+		font-weight: $regular;
+		line-height: 1.4;
+		color: #8D9AAE;
+		text-decoration: none;
+		display: block;
+
+		transition: color 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+		&:hover {
+
+			color: white;
+		}
+	}
+
+	> li > a {
+
+
+	}
+}
+
+.footer-contacts {
+
+	&__title {
+
+		color: white;
+		font-family: $fontPrimary;
+		font-size: 24px;
+		font-weight: $regular;
+		line-height: 1.41;
+		margin-bottom: 16px;
+	}
+
+	&__list-items {
+
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	&__item {
+
+		margin-bottom: 16px;
+
+		&:last-child {
+
+			margin-bottom: 0;
+		}
+	}
+}
+
+.footer-email {
+
+	color: #D4D9E0;
+	font-size: 18px;
+	line-height: 1.4;
+	opacity: 0.5;
+	text-decoration: none;
+	transition: opacity 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+	&:hover {
+
+		opacity: 1;
+	}
+}
+
+.social {
 
 	display: flex;
 
-	&__link {
+	&__item {
 
-		text-decoration: none;
-		color: white;
-		display: flex;
-		align-items: center;
-		margin-right: 25px;
-		opacity: 0.5;
-		transition: opacity 0.2s ease-out;
+		margin-right: 24px;
+		display: block;
+		fill: #D4D9E0;
 
 		&:last-child {
 
@@ -46,267 +116,112 @@
 
 		&:hover {
 
-			opacity: 1;
+			fill: $colorPrimary;
 		}
 	}
 
-	&__icon {
+	.icon {
 
-		margin-right: 6px;
+		fill: inherit;
+		transition: fill 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+		&._facebook {
+
+			height: 24px;
+			width: 24px;
+		}
+
+		&._instagram {
+
+			height: 24px;
+			width: 24px;
+		}
+
+		&._twitter {
+
+			height: 24px;
+			width: 24px;
+		}
 	}
 }
 
-.socialmedia {
+.subscribe {
 
-	display: flex;
+	&__header {
 
-	&__link {
+		margin-bottom: 18px;
+	}
 
-		display: block;
-		margin: 0 10px;
-		color: #f5ede6;
-		text-decoration: none;
-		font-size: 12px;
-		opacity: 0.6;
-		transition: opacity 0.2s ease-out;
+	&__title {
 
-		&:hover {
+		font-size: 18px;
+		font-weight: $regular;
+		line-height: 1.4;
+	}
+}
 
-			opacity: 1;
+.subscribe-form {
+
+	.form__group {
+
+		display: flex;
+	}
+
+	.form__input {
+
+		color: white;
+		padding-right: 35px;
+
+		&:focus,
+		&:valid {
+
+			border-color: $colorPrimary;
 		}
 	}
 
-	&__icon {
-		fill: #f5ede6;
+	&__button {
+
+		font-family: $fontSecondary;
+		font-weight: $bold;
+		color: $colorGeneral;
+		font-size: 18px;
+		line-height: 22px;
+		padding: 10px;
+		background: white;
+		border-radius: 16px;
+		width: 126px;
+		flex: 0 0 126px;
+		margin-left: -30px;
+		transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+		&:hover {
+
+			background: $colorPrimary;
+		}
 	}
-
-	.icon-youtube {
-
-		width: 35px;
-		height: 24px;
-	}
-
-	.icon-instagram,
-	.icon-facebook,
-	.icon-telegram {
-
-		width: 24px;
-		height: 24px;
-	}
-
-	.icon-telegram {
-
-		margin-right: 6px;
-	}
-
-
 }
 
 .footer {
 
-	padding-top: 36px;
+	padding: 100px 0 100px;
+	background: $colorGeneral;
+	color: white;
 
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	// background-color: #ccc;
-	
-	&__container {
+	&__inner {
 
 		display: flex;
+		justify-content: space-between;
 	}
 
 	&__logo {
 
-		flex: 0 0 230px;
-		display: flex;
-		align-items: center;
-
-		.site-logo {
-
-			opacity: 0.8;
-			transition: opacity 0.2s ease-out;
-			margin-bottom: 90px;
-
-			&:hover {
-
-				opacity: 1;
-			}
-		}
-		
+		flex: 0 0 auto;
 	}
 
-	&__nav {
+	&__subscribe {
 
-		padding: 25px 0;
-	}
-
-	&__contacts {
-
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		padding: 27px 90px 20px 90px;
-		border-top: 1px solid #280315;
-		border-bottom: 1px solid #280315;
-	}
-
-	&__messenger {
-
-		margin-right: 30px;
-
-		.messengers__item {
-			
-			opacity: 1;
-
-			&:hover {
-
-				.messengers__icon {
-
-					fill: white;
-				}
-			}
-		}
-
-		.messengers__icon {
-
-			fill: #735f69;
-			transition: fill 0.2s ease-out;
-		}
-	}
-
-	&__messenger,
-	&__phone-list {
-
-		margin-bottom: 36px;
-	}
-
-	&__email {
-
-		margin-right: 60px;
-		display: flex;
-		align-items: center;
-	}
-
-
-	&__email-link {
-
-		text-decoration: none;
-		color: white;
-		display: flex;
-		align-items: center;
-		opacity: 0.5;
-		font-size: 15px;
-		line-height: 18px;
-		transition: opacity 0.2s ease-out;
-
-		&:hover {
-
-			opacity: 1;
-		}
-
-		._icon {
-
-			fill: white;
-			width: 21px;
-			height: 16px;
-			margin-top: 2px;
-			margin-right: 8px;
-		}
-	}
-
-	&__address-link {
-
-		text-decoration: none;
-		color: white;
-		display: flex;
-		align-items: center;
-		opacity: 0.5;
-		font-size: 15px;
-		line-height: 18px;
-		transition: opacity 0.2s ease-out;
-
-		&:hover {
-
-			opacity: 1;
-		}
-
-		._icon {
-
-			height: 26px;
-			width: 18px;
-			fill: white;
-			margin-right: 4px;
-		}
-	}
-
-	&__socialmedia {
-
-		display: flex;
-		padding: 26px 0 22px;
-		justify-content: center;
-	}
-
-	&__copyrigts {
-
-		padding: 0 0 6px;
-		display: flex;
-		justify-content: space-around;
-		align-items: flex-end;
-		color: white;
-		font-size: 12px;
-	}
-
-	.copyrigts,
-	.privacy-policy,
-	.ArtSites {
-		opacity: .3;
-		color: inherit;
-		text-decoration: none;
-		transition: opacity 0.2s ease-out;
-		letter-spacing: 0.025rem;
-
-		&:hover {
-
-			opacity: 1;
-		}
-	}
-
-	.copyrigts:hover {
-
-		opacity: .3;
-	}
-
-	.privacy-policy {
-
-		text-decoration: underline;
-	}
-
-	.ArtSites {
-		opacity: 1;
-		display: flex;
-		align-items: center;
-
-		&__messege {
-			margin-right: 8px;
-			opacity: .3;
-			line-height: 15px;
-			transition: opacity 0.2s ease-out;
-		}
-
-		&__logo {
-
-			opacity: .6;
-			transition: opacity 0.2s ease-out;
-		}
-
-		&:hover {
-
-			.ArtSites__logo,
-			.ArtSites__messege {
-
-				opacity: 1;
-			}
-		}
+		flex: 0 0 395px;
+		max-width: 395px;
 	}
 
 }
