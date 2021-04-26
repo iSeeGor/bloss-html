@@ -927,7 +927,7 @@
 
 	&__body {
 
-		padding: 55px 100px 45px;
+		padding: 55px 100px 35px;
 	}
 
 	&__header {
@@ -1131,6 +1131,38 @@
 			left: -10px;
 		}
 	}
+
+	.sing-up {
+
+		background: #F4F5F7;
+		margin-top: 190px;
+
+		&__inner {
+			
+			flex-direction: column;
+			border-radius: 30px;
+		}
+
+		&__media {
+
+			max-width: 400px;
+			margin: 0 auto;
+			margin-top: -150px;
+			margin-bottom: 40px;
+		}
+
+		&__body {
+
+			max-width: 480px;
+			padding: 0;
+			margin: 0 auto;
+		}
+
+		&__header {
+
+			text-align: center;
+		}
+	}
 }
 
 @include _1200 {
@@ -1271,6 +1303,17 @@
 		&__item {
 
 			margin-bottom: 25px;
+		}
+	}
+
+	.testimonials {
+
+		.swiper-button._next {
+			right: 25px;
+		}
+
+		.swiper-button._prev {
+			left: 25px;
 		}
 	}
 }
@@ -1517,6 +1560,23 @@
 		&__title {
 
 			font-size: 32px;
+		}
+	}
+
+	.testimonials {
+
+		position: relative;
+
+		.container {
+
+			position: static;
+		}
+
+		.swiper-button {
+
+			top: auto;
+			bottom: 36px;
+			transform: none;
 		}
 	}	
 }
@@ -1968,6 +2028,40 @@
 		top: -40px;
 		right: 40px;
 	}
+
+	.testimonials {
+
+		&__inner {
+
+			padding: 60px 0;
+		}
+	}
+
+	.testimonial-item {
+
+		&__typography {
+
+			font-size: 16px;
+		}
+	}
+
+	.sing-up {
+		
+		&__media {
+
+			max-width: 340px;
+		}
+
+		&__title {
+
+			font-size: 34px;
+		}
+
+		&__description {
+
+			font-size: 20px;
+		}
+	}
 }
 
 @include _485 {
@@ -2077,6 +2171,26 @@
 		&__link {
 
 			font-size: 14px;
+		}
+	}
+
+	.sing-up {
+
+		margin-top: 150px;
+
+		&__media {
+
+			margin-top: -110px;
+		}
+		
+		&__title {
+
+			font-size: 28px;
+		}
+
+		&__description {
+
+			font-size: 18px;
 		}
 	}
 }
@@ -2208,6 +2322,38 @@
 			min-width: 100%;
 		}
 	}
+
+	.testimonials {
+
+		.swiper-button._next {
+
+			right: 15px;
+		}
+
+		.swiper-button._prev {
+
+			left: 15px;
+		}
+	}
+
+	.sing-up {
+		
+		&__media {
+
+			max-width: 260px;
+		}
+
+		&__title {
+
+			font-size: 24px;
+		}
+
+		&__description {
+
+			font-size: 16px;
+		}
+
+	}
 }
 
 @media (max-width: 360px) {
@@ -2229,6 +2375,7 @@
 	.lnews-card__link {
 		font-size: 16px;
 	}
+	
 
 }
 
