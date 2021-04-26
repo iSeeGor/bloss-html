@@ -33,7 +33,16 @@ const animationInit = () => {
 	AOS.init({
 
 		disable: 'mobile',
+		once: true,
 	});
+
+	let rellax = new Rellax('.rellax', {
+
+		center: true
+	});
+
+  	SmoothScroll({ stepSize: 60 });
+
 }
 
 const hamburger = () => {
