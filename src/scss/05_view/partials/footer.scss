@@ -225,3 +225,78 @@
 	}
 
 }
+
+@include _1024 {
+
+	.footer {
+		padding: 60px 0;
+
+		&__inner {
+
+			// flex-direction: column;
+			flex-wrap: wrap;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		&__logo {
+
+			flex: 0 0 100%;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		&__subscribe {
+
+			margin-top: 40px;
+		}
+	}
+}
+
+@include _485 {
+
+	.footer-contacts {
+
+		&__title {
+
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+
+	}
+
+	.footer-menu {
+
+		li a {
+
+			font-size: 16px;
+		}
+	}
+
+	.subscribe {
+
+		&__title {
+
+			font-size: 16px;
+		}
+	}
+
+	.subscribe-form {
+
+		&__button {
+
+			width: 100%;
+			flex: 0 0 86px;
+			max-width: 86px;
+		}
+	}
+
+	.footer {
+
+		&__subscribe {
+
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+}

@@ -1640,6 +1640,43 @@ ul.ld-menu {
     flex: 0 0 395px;
     max-width: 395px; }
 
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 0; }
+    .footer__inner {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      max-width: 400px;
+      margin: 0 auto; }
+    .footer__logo {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      text-align: center;
+      margin-bottom: 40px; }
+    .footer__subscribe {
+      margin-top: 40px; } }
+
+@media (max-width: 485.98px) {
+  .footer-contacts__title {
+    font-size: 18px;
+    margin-bottom: 10px; }
+  .footer-menu li a {
+    font-size: 16px; }
+  .subscribe__title {
+    font-size: 16px; }
+  .subscribe-form__button {
+    width: 100%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 86px;
+    flex: 0 0 86px;
+    max-width: 86px; }
+  .footer__subscribe {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; } }
+
 /*============================================================================
 	#Landing Page
 ==============================================================================*/
