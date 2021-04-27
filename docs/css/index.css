@@ -1368,7 +1368,17 @@ ul.ld-menu {
   position: relative;
   z-index: 1; }
   .header-logo__link {
-    display: block; }
+    display: block;
+    max-width: 180px; }
+  .header-logo__image {
+    -webkit-transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  .header-logo__image--secondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; }
 
 .header-menu__container {
   position: relative;
@@ -1489,6 +1499,10 @@ ul.ld-menu {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
+    opacity: 1; }
+  .header.is-active .header-logo__image--primary {
+    opacity: 0; }
+  .header.is-active .header-logo__image--secondary {
     opacity: 1; } }
 
 /*============================================================================
@@ -1764,8 +1778,8 @@ ul.ld-menu {
     content: '';
     position: absolute;
     top: 0;
-    right: 2px;
-    width: 94.5%;
+    right: 1%;
+    width: 93%;
     height: 100%;
     border-radius: 100%;
     -webkit-box-shadow: 0px 12px 34px #E3C4C1;
@@ -2291,7 +2305,8 @@ ul.ld-menu {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  text-align: center; }
 
 .testimonial-item__avatar {
   border-radius: 100%;
@@ -2370,81 +2385,6 @@ ul.ld-menu {
     font-weight: 400;
     line-height: 1.4;
     color: #264066; }
-
-/* Landing Experts */
-.landing-expert .section-hero::before {
-  background: -o-linear-gradient(350.15deg, #34588D -2.44%, rgba(38, 64, 102, 0) 48.6%, #33588D 97.56%);
-  background: linear-gradient(99.85deg, #34588D -2.44%, rgba(38, 64, 102, 0) 48.6%, #33588D 97.56%);
-  opacity: 0.2; }
-
-.landing-expert .about {
-  background: #F5C1BC; }
-  .landing-expert .about .heart-separator {
-    fill: #264066; }
-  .landing-expert .about__deco {
-    opacity: 0.1;
-    border-color: white; }
-  .landing-expert .about ._deco-item {
-    background: white; }
-    .landing-expert .about ._deco-item:first-child {
-      background: transparent;
-      border-color: white; }
-
-.landing-expert .section-video {
-  background: #264066;
-  position: relative;
-  z-index: 1; }
-  .landing-expert .section-video .section__title {
-    color: white; }
-  .landing-expert .section-video ._deco-item {
-    border-color: #F5C1BC; }
-
-.landing-expert .services {
-  background: #264066;
-  position: relative;
-  z-index: 1; }
-  .landing-expert .services ._deco-item {
-    opacity: 0.03; }
-
-.landing-expert .service-block__title {
-  color: white; }
-
-.landing-expert .service-block ._deco-dots {
-  fill: #F5C1BC; }
-
-.landing-expert .blog-latest {
-  background: #264066; }
-  .landing-expert .blog-latest .section__title {
-    color: white; }
-
-.landing-expert .lnews-card {
-  background: white; }
-
-.landing-expert .testimonials {
-  background: #F5C1BC;
-  margin-bottom: 90px; }
-  .landing-expert .testimonials__inner {
-    padding: 85px 0;
-    background: none; }
-  .landing-expert .testimonials .section__header {
-    margin-bottom: 25px; }
-  .landing-expert .testimonials .section__title {
-    color: #264066; }
-
-.landing-expert .testimonial-item {
-  color: #264066; }
-
-.landing-expert .testimonial-slider__pagination {
-  margin: 0; }
-
-.landing-expert .sing-up__inner {
-  border-radius: 410px 37px 37px 410px; }
-
-.landing-expert .sing-up__media {
-  margin-left: -40px; }
-
-.landing-expert .sing-up__body {
-  padding: 40px 100px 40px 65px; }
 
 @media (max-width: 1440px) {
   .hero {
@@ -3110,12 +3050,104 @@ ul.ld-menu {
     flex: 0 0 90%;
     max-width: 90%; } }
 
-@media (max-height: 680px) {
+@media (max-height: 680px) and (max-width: 1200px) {
   .hero-categories {
     top: 70px; }
     .hero-categories .container {
       overflow: auto;
       height: 100%; } }
+
+/*============================================================================
+	#Landing Expert
+==============================================================================*/
+.landing-expert .section-hero::before {
+  background: -o-linear-gradient(350.15deg, #34588D -2.44%, rgba(38, 64, 102, 0) 48.6%, #33588D 97.56%);
+  background: linear-gradient(99.85deg, #34588D -2.44%, rgba(38, 64, 102, 0) 48.6%, #33588D 97.56%);
+  opacity: 0.2; }
+
+.landing-expert .hero-media__item::after {
+  -webkit-box-shadow: 0px 12px 34px rgba(38, 64, 102, 0.3);
+  box-shadow: 0px 12px 34px rgba(38, 64, 102, 0.3); }
+
+.landing-expert .about {
+  background: #F5C1BC; }
+  .landing-expert .about .heart-separator {
+    fill: #264066; }
+  .landing-expert .about__deco {
+    opacity: 0.1;
+    border-color: white; }
+  .landing-expert .about ._deco-item {
+    background: white; }
+    .landing-expert .about ._deco-item:first-child {
+      background: transparent;
+      border-color: white; }
+
+.landing-expert .section-video {
+  background: #264066;
+  position: relative;
+  z-index: 1; }
+  .landing-expert .section-video .section__title {
+    color: white; }
+  .landing-expert .section-video ._deco-item {
+    border-color: #F5C1BC; }
+
+.landing-expert .services {
+  background: #264066;
+  position: relative;
+  z-index: 1; }
+  .landing-expert .services ._deco-item {
+    opacity: 0.03; }
+
+.landing-expert .service-block__title {
+  color: white; }
+
+.landing-expert .service-block ._deco-dots {
+  fill: #F5C1BC; }
+
+.landing-expert .blog-latest {
+  background: #264066; }
+  .landing-expert .blog-latest .section__title {
+    color: white; }
+
+.landing-expert .lnews-card {
+  background: white; }
+
+.landing-expert .testimonials {
+  background: #F5C1BC;
+  margin-bottom: 90px; }
+  .landing-expert .testimonials__inner {
+    padding: 85px 0;
+    background: none; }
+  .landing-expert .testimonials .section__header {
+    margin-bottom: 25px; }
+  .landing-expert .testimonials .section__title {
+    color: #264066; }
+
+.landing-expert .testimonial-item {
+  color: #264066; }
+
+.landing-expert .testimonial-slider__pagination {
+  margin: 0; }
+
+@media (min-width: 1440px) {
+  .landing-expert .sing-up__inner {
+    border-radius: 410px 37px 37px 410px; }
+  .landing-expert .sing-up__media {
+    margin-left: -40px; }
+  .landing-expert .sing-up__body {
+    padding: 40px 100px 30px 65px; } }
+
+@media (max-width: 1024px) {
+  .landing-expert .testimonials {
+    background: none; }
+    .landing-expert .testimonials__inner {
+      background: #F5C1BC;
+      padding: 85px 0 45px;
+      margin-bottom: 40px; } }
+
+@media (max-width: 575.98px) {
+  .landing-expert .testimonials__inner {
+    padding-top: 60px; } }
 
 /* Modals
 ===================================================*/

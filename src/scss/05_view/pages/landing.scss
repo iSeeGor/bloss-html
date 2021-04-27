@@ -126,8 +126,8 @@
 			content: '';
 			position: absolute;
 			top: 0;
-			right: 2px;
-			width: 94.5%;
+			right: 1%;
+			width: 93%;
 			height: 100%;
 			border-radius: 100%;
 			// background: #E3C4C1;
@@ -834,6 +834,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		text-align: center;
 	}
 
 	&__avatar {
@@ -952,151 +953,6 @@
 		line-height: 1.4;
 		color: $colorSecondary;
 	}
-}
-
-/* Landing Experts */
-.landing-expert {
-
-	.section-hero::before {
-
-		background: linear-gradient(99.85deg, #34588D -2.44%, rgba(38, 64, 102, 0) 48.6%, #33588D 97.56%);
-		opacity: 0.2;
-	}
-
-	.about {
-
-		background: $colorPrimary;
-
-		.heart-separator {
-
-			fill: $colorSecondary;
-		}
-
-		&__deco {
-
-			opacity: 0.1;
-			border-color: white;
-		}
-
-		._deco-item {
-
-			background: white;
-			
-			&:first-child {
-				background: transparent;
-				border-color: white;
-			}
-		}
-	}
-
-	.section-video {
-
-		background: $colorSecondary;
-		position: relative;
-		z-index: 1;
-
-		.section__title {
-
-			color: white;
-		}
-
-		._deco-item {
-
-			border-color: $colorPrimary;
-		}
-	}
-
-	.services {
-	
-		background: $colorSecondary;
-		position: relative;
-		z-index: 1;	
-
-		._deco-item {
-
-			opacity: 0.03;
-		}
-	}
-
-	.service-block {
-
-		&__title {
-
-			color: white;
-		}
-
-		._deco-dots {
-
-			fill: $colorPrimary;
-		}
-	}
-
-	.blog-latest {
-
-		background: $colorSecondary;
-
-		.section__title {
-
-			color: white;
-		}
-	}
-
-	.lnews-card {
-
-		background: white;
-	}
-
-	.testimonials {
-
-		background: $colorPrimary;
-		margin-bottom: 90px;
-
-		&__inner {
-
-			padding: 85px 0;
-			background: none;
-		}
-
-		.section__header {
-
-			margin-bottom: 25px;
-		}
-
-		.section__title {
-
-			color: $colorSecondary;
-		}
-	}
-	
-	.testimonial-item {
-
-		color: $colorSecondary;
-	}
-
-	.testimonial-slider {
-
-		&__pagination {
-
-			margin: 0;
-		}
-	}
-
-	.sing-up {
-
-		&__inner {
-
-			border-radius: 410px 37px 37px 410px;
-		}
-
-		&__media {
-
-			margin-left: -40px;
-		}
-
-		&__body {
-			padding: 40px 100px 40px 65px;
-		}
-	}	
 }
 
 @include _1400 {
@@ -2393,7 +2249,7 @@
 }
 
 // Media Height
-@media (max-height: 680px) {
+@media (max-height: 680px) and (max-width: 1200px) {
 
 	.hero-categories {
 

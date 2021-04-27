@@ -8,6 +8,20 @@
 	&__link {
 
 		display: block;
+		max-width: 180px;
+	}
+
+	&__image {
+
+		transition: opacity .8s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	&__image--secondary {
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
 	}
 }
 
@@ -194,6 +208,16 @@
 				transform: translateY(0);
 				opacity: 1;
 			}
+		}
+
+		.header-logo__image--primary {
+
+			opacity: 0;
+		}
+
+		.header-logo__image--secondary {
+
+			opacity: 1;
 		}
 	}
 
