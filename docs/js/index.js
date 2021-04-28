@@ -4,6 +4,8 @@ window.addEventListener('DOMContentLoaded', function(){
 	hamburger();
 	categoryToggle();
 	testimonialSlider();
+	videoPlayer();
+	anchorSmoothScroll();
 
 });
 
@@ -77,5 +79,33 @@ const testimonialSlider = () => {
 			el: '.testimonial-slider__pagination',
 			type: 'bullets',
 		}
+	});
+}
+
+const videoPlayer = () => {
+
+	let playerContainer = document.querySelector('.video-player');
+
+	if(!playerContainer) return;
+
+	let player = document.querySelector('.video-player__movie source');
+
+	playerContainer.addEventListener('click', function(){
+		
+		this.classList.add('is-active');
+		player.src = player.dataset.src;
+		document.querySelector('.video-player__movie').load();
+
+	});
+}
+
+const anchorSmoothScroll = () => {
+
+	$(document).on('click', 'a[href^="#"]', function (event) {
+	event.preventDefault();
+
+	$('html, body').animate({
+			scrollTop: $($.attr(this, 'href')).offset().top
+		}, 2000);
 	});
 }
