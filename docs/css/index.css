@@ -1436,35 +1436,43 @@ ul.ld-menu {
 @media (max-width: 1024px) {
   .header-logo__link {
     max-width: 122px; }
-  .header__menu {
+  .header {
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    visibility: hidden;
-    pointer-events: none;
-    -webkit-transition-delay: 1.1s;
-    -o-transition-delay: 1.1s;
-    transition-delay: 1.1s; }
-    .header__menu::before {
-      content: '';
-      position: absolute;
+    -webkit-transition: background 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: background 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: background 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
+    .header__menu {
+      position: fixed;
       top: 0;
       left: 0;
-      height: 100%;
       width: 100%;
-      background: #264066;
-      opacity: 0;
-      -webkit-transition: opacity 1.1s cubic-bezier(0.075, 0.82, 0.165, 1);
-      -o-transition: opacity 1.1s cubic-bezier(0.075, 0.82, 0.165, 1);
-      transition: opacity 1.1s cubic-bezier(0.075, 0.82, 0.165, 1); }
-  .header__links {
-    display: none;
-    visibility: hidden; }
-  .header__hamburger {
-    display: block;
-    visibility: visible; }
+      height: 100%;
+      visibility: hidden;
+      pointer-events: none;
+      -webkit-transition-delay: 1.1s;
+      -o-transition-delay: 1.1s;
+      transition-delay: 1.1s; }
+      .header__menu::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #264066;
+        opacity: 0;
+        -webkit-transition: opacity 1.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        -o-transition: opacity 1.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: opacity 1.1s cubic-bezier(0.075, 0.82, 0.165, 1); }
+    .header__links {
+      display: none;
+      visibility: hidden; }
+    .header__hamburger {
+      display: block;
+      visibility: visible; }
   .header-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1502,7 +1510,15 @@ ul.ld-menu {
   .header.is-active .header-logo__image--primary {
     opacity: 0; }
   .header.is-active .header-logo__image--secondary {
-    opacity: 1; } }
+    opacity: 1; }
+  .header.is-fixed {
+    background: #264066; }
+    .header.is-fixed .header-logo__image--primary {
+      opacity: 0; }
+    .header.is-fixed .header-logo__image--secondary {
+      opacity: 1; }
+    .header.is-fixed .hamburger-inner, .header.is-fixed .hamburger-inner::before, .header.is-fixed .hamburger-inner::after {
+      background: #F5C1BC; } }
 
 /*============================================================================
 	#Footer
@@ -2527,7 +2543,7 @@ ul.ld-menu {
 
 @media (max-width: 1024px) {
   .section-hero {
-    padding-top: 0; }
+    padding-top: 67px; }
   ul.ld-menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2654,6 +2670,18 @@ ul.ld-menu {
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%); }
+      .hero-categories ._close::before {
+        content: '';
+        padding: 14px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
   .hero-control {
     display: block;
     padding: 20px 0 40px; }
@@ -3116,8 +3144,11 @@ ul.ld-menu {
       background: transparent;
       border-color: white; }
 
+.landing-expert .main {
+  position: relative;
+  background: #264066; }
+
 .landing-expert .section-video {
-  background: #264066;
   position: relative;
   z-index: 1; }
   .landing-expert .section-video .section__title {
@@ -3125,8 +3156,10 @@ ul.ld-menu {
   .landing-expert .section-video ._deco-item {
     border-color: #F5C1BC; }
 
+.landing-expert .video-player__media {
+  background: #F5C1BC; }
+
 .landing-expert .services {
-  background: #264066;
   position: relative;
   z-index: 1; }
   .landing-expert .services ._deco-item {
@@ -3138,10 +3171,8 @@ ul.ld-menu {
 .landing-expert .service-block ._deco-dots {
   fill: #F5C1BC; }
 
-.landing-expert .blog-latest {
-  background: #264066; }
-  .landing-expert .blog-latest .section__title {
-    color: white; }
+.landing-expert .blog-latest .section__title {
+  color: white; }
 
 .landing-expert .lnews-card {
   background: white; }

@@ -40,9 +40,14 @@
 		}
 	}
 
+	.main {
+
+		position: relative;
+		background: $colorSecondary;
+	}
+
 	.section-video {
 
-		background: $colorSecondary;
 		position: relative;
 		z-index: 1;
 
@@ -57,9 +62,13 @@
 		}
 	}
 
+	.video-player__media {
+
+		background: $colorPrimary;
+	}
+
 	.services {
 	
-		background: $colorSecondary;
 		position: relative;
 		z-index: 1;	
 
@@ -83,8 +92,6 @@
 	}
 
 	.blog-latest {
-
-		background: $colorSecondary;
 
 		.section__title {
 

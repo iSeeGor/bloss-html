@@ -128,6 +128,12 @@
 
 	.header {
 
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		transition: background 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+
 		&__menu {
 
 			position: fixed;
@@ -221,4 +227,23 @@
 		}
 	}
 
+	.header.is-fixed {
+
+		background: $colorSecondary;
+
+		.header-logo__image--primary {
+			opacity: 0;
+		}
+
+		.header-logo__image--secondary {
+			opacity: 1;
+		}
+
+		.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+
+			background: $colorPrimary;
+		}
+	}
+
 }
+

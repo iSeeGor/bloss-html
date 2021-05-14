@@ -1,5 +1,7 @@
 window.addEventListener('DOMContentLoaded', function(){
 	
+	mainMenu();
+	mobileStikyMenu();
 	animationInit();
 	hamburger();
 	categoryToggle();
@@ -8,6 +10,54 @@ window.addEventListener('DOMContentLoaded', function(){
 	anchorSmoothScroll();
 
 });
+
+const mainMenu = () => {
+
+	let menuLinks = document.querySelectorAll('.ld-menu a');
+	
+	menuLinks.forEach(item => {
+
+		item.addEventListener('click', function(){
+
+			document.body.classList.remove('overflow');
+			document.querySelector('.header').classList.remove('is-active');
+			document.querySelector('.hamburger').classList.remove('is-active');
+		});
+	});
+}
+
+const mobileStikyMenu = () => {
+
+	var mobileBreakpoint = window.matchMedia('(max-width: 1024px)');
+
+	function detectMobile(e) {
+
+		let scrollTop;
+
+		if (e.matches) {
+
+			
+			scrollTop = window.addEventListener('scroll', function(){
+				fixedHeader();
+			})
+		} else {
+
+			removeEventListener('scroll', scrollTop);
+		}
+	}
+
+	mobileBreakpoint.addListener(detectMobile);
+	detectMobile(mobileBreakpoint);
+
+	function fixedHeader(){
+
+		if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+			document.querySelector(".header").classList.add('is-fixed');
+		} else {
+			document.querySelector(".header").classList.remove('is-fixed');
+  		}
+	}
+}
 
 const animationInit = () => {
 
@@ -40,7 +90,11 @@ const hamburger = () => {
 
 const categoryToggle = () => {
 
-	
+	$(document).click((event) => {
+		if (!$(event.target).closest('.hero-categories').length && $('.hero-categories').hasClass('is-active') && !$(event.target).is('.hero-control__categories')) {
+			hideCategories();
+		}        
+	});
 
 	document.querySelector('.hero-control__categories').addEventListener('click', function(){
 
@@ -48,7 +102,9 @@ const categoryToggle = () => {
 		document.body.classList.add('glass-overflow-in');
 	});
 
-	document.querySelector('.hero-categories ._close').addEventListener('click', function(){
+	document.querySelector('.hero-categories ._close').addEventListener('click', hideCategories);
+
+	function hideCategories(){
 
 		document.querySelector('.hero-categories').classList.remove('is-active');
 		document.body.classList.remove('glass-overflow-in');
@@ -57,7 +113,13 @@ const categoryToggle = () => {
 		setTimeout(() => {
 			document.body.classList.remove('glass-overflow-out');
 		}, 1000);
-	});
+	}
+
+	document.querySelectorAll('.hero-categories__item').forEach(link => {
+
+		link.addEventListener('click', hideCategories);
+	})
+
 }
 
 const testimonialSlider = () => {

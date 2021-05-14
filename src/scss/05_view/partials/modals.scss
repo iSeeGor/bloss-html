@@ -1,119 +1,81 @@
 /*============================================================================
 	#Modals
 ==============================================================================*/
-.site__modals {
-	display: none;
+
+.mfp-bg {
+
+	background: $colorGeneral;
+	opacity: .8;
 }
 
-.site__fancybox {
-
-	.fancybox-bg {
-
-		background: #2b0317;
-		opacity: .95;
-	}	
+.mfp-close-btn-in .mfp-close {
+    color: $colorGeneral;
+    top: 92px;
+    font-size: 36px;
+    right: 4px;
 }
 
-.moda-close {
+.cta-modal {
 
-	padding: 10px;
-	// background: #000;
-
-	._icon {
-
-		width: 28px;
-		height: 28px;
-		fill: $colorBase;
-		transform: rotate(45deg);
-		transition: transform 0.2s ease-out;
-	}
-
-	&:hover {
-
-		._icon {
-
-			transform: rotate(135deg);
-		}
-	}
-}
-
-.modal-main {
-
-	max-width: 450px;
-	padding: 0;
-	overflow: hidden;
+	max-width: 550px;
+	margin: 0 auto;
+	margin-bottom: 90px;
 	position: relative;
-	background: url('../images/modal/modal-bg.jpg') repeat center;
 
-	&__header {
-		
-		padding: 50px 45px 30px;
-		color: white;
+	&__logo {
+
+		margin: o auto;
 		text-align: center;
-		background: #7f003e;
-		mix-blend-mode: multiply;
-		position: relative;
-		z-index: 1;
-		overflow: hidden;
-		pointer-events: none;
+		margin-bottom: -95px;
 
-		&::before {
-
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 345px;
-			height: 345px;
-			background: url('../images/modal/header-bg.jpg') no-repeat center;
-			z-index: -1;
-		}
-		
-	}
-
-	&__title {
-
-		font-size: 22px;
-		line-height: 30px;
-		margin-bottom: 12px;
-	}
-
-	&__description {
-
-		color: #cdaebb;
-		font-size: 14px;
-		line-height: 18px;
 	}
 
 	&__body {
 
-		padding: 20px 45px 25px;
+		background: white;
+		border-radius: 32px;
+		padding: 123px 40px 40px;
+	
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__title {
+
+		font-size: 48px;
+		font-weight: normal;
+		line-height: 1.4;
+		font-family: $fontHeadings;
+		color: $colorSecondary;
+		margin-bottom: 4px;
+	}
+
+	&__text {
+
+		font-size: 24px;
+		font-weight: $medium;
+		line-height: 1.4;
+		color: $colorSecondary;
+		margin-bottom: 32px;
+
+		span {
+
+			font-weight: $black;
+			background: $colorPrimary;
+			padding: 3px 28px;
+			border-radius: 8px;
+		}
 	}
 
 	.button-primary {
 
-		background: #7f003e;
-		width: 100%;
-		margin-top: 20px;
-		border-radius: 4px;
-		font-size: 16px;
-		line-height: 18px;
-		font-weight: $semiBold;
-		padding: 10px 30px 12px;
+		color: white;
+		&::after {
 
-		&:hover {
-
-			background: $colorBase;
+			box-shadow: inset 0 0 0 2px white;
 		}
 	}
-
-	.moda-close {
-
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		z-index: 2;
-		
-	}
 }
-
